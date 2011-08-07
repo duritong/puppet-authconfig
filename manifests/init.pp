@@ -3,7 +3,7 @@ class authconfig($algo='sha512') {
   package{'authconfig': ensure => installed }
 
   exec{'ensure_shadowed_passwd':
-    command => 'pwconf',
+    command => 'pwconv',
     creates => '/etc/shadow',
   }
   exec{'ensure_shadowed_group':
