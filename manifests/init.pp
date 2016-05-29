@@ -1,3 +1,5 @@
+# ensure that authconfig is propery
+# configured
 class authconfig($algo='sha512') {
 
   package{'authconfig': ensure => installed }
